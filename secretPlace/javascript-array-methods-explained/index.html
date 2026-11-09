@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore various array methods in JavaScript, learn their usage, and understand how to manipulate arrays effectively in your code.">
+    <meta name="google-adsense-account" content="ca-pub-1253488304183553">
+    <title>JavaScript Array Methods Explained | Tutorial Expert</title>
+    <link rel="stylesheet" href="../style.min.css">
+    <link rel="stylesheet" href="../cookies/cookies.min.css">
+    <link rel="icon" type="image/x-icon" href="../logo.ico">
+</head>
+<body>
+    <header>
+        <h1>JavaScript Array Methods Explained</h1>
+    </header>
+    <div class="container">
+        <div class="tutorial">
+    <h2>Introduction to JavaScript Arrays</h2>
+    <p>JavaScript arrays are a vital data structure that allows you to store multiple values in a single variable. Arrays are dynamic, meaning they can grow and shrink as needed. Understanding array methods is key to manipulating and managing these data structures effectively.</p>
+
+    <h2>Common Array Methods</h2>
+    <h3>1. push()</h3>
+    <p>The <code>push()</code> method adds one or more elements to the end of an array and returns the new length of the array. This is a common way to append items.</p>
+    <pre><code>let fruits = ['apple', 'banana'];
+fruits.push('orange');  // fruits now becomes ['apple', 'banana', 'orange']
+    </code></pre>
+
+    <h3>2. pop()</h3>
+    <p>The <code>pop()</code> method removes the last element from an array and returns that element. This changes the length of the array.</p>
+    <pre><code>let fruits = ['apple', 'banana', 'orange'];
+let lastFruit = fruits.pop();  // lastFruit is 'orange', fruits now is ['apple', 'banana']
+    </code></pre>
+
+    <h3>3. shift()</h3>
+    <p>The <code>shift()</code> method removes the first element from an array and returns that removed element. The array length is decreased by one.</p>
+    <pre><code>let fruits = ['apple', 'banana', 'orange'];
+let firstFruit = fruits.shift();  // firstFruit is 'apple', fruits now is ['banana', 'orange']
+    </code></pre>
+
+    <h3>4. unshift()</h3>
+    <p>The <code>unshift()</code> method adds one or more elements to the beginning of an array and returns the new length of the array.</p>
+    <pre><code>let fruits = ['banana', 'orange'];
+fruits.unshift('apple');  // fruits now becomes ['apple', 'banana', 'orange']
+    </code></pre>
+
+    <h2>Advanced Array Methods</h2>
+    <h3>5. map()</h3>
+    <p>The <code>map()</code> method creates a new array populated with the results of calling a provided function on every element in the calling array.</p>
+    <pre><code>let numbers = [1, 2, 3];
+let doubled = numbers.map(n => n * 2);  // doubled becomes [2, 4, 6]
+    </code></pre>
+
+    <h3>6. filter()</h3>
+    <p>The <code>filter()</code> method creates a new array with all elements that pass the test implemented by the provided function.</p>
+    <pre><code>let numbers = [1, 2, 3, 4, 5];
+let evens = numbers.filter(n => n % 2 === 0);  // evens becomes [2, 4]
+    </code></pre>
+
+    <h3>7. reduce()</h3>
+    <p>The <code>reduce()</code> method executes a reducer function on each element of the array, resulting in a single output value.</p>
+    <pre><code>let sum = [1, 2, 3].reduce((accumulator, current) => accumulator + current, 0);  // sum is 6
+    </code></pre>
+
+    <h3>8. forEach()</h3>
+    <p>The <code>forEach()</code> method executes a provided function once for each array element.</p>
+    <pre><code>let fruits = ['apple', 'banana', 'orange'];
+fruits.forEach(fruit => console.log(fruit));  // logs each fruit to the console
+    </code></pre>
+
+    <h2>Conclusion</h2>
+    <p>Mastering JavaScript array methods is essential for effective coding and data manipulation. These methods help simplify your code and enhance its functionality. Practice these methods to become proficient in handling arrays.</p>
+</div>
+        <div>#javascript #arrays #programming #web-development</div>
+        <div class="next-link">
+            <a href="/python-web-frameworks-overview">Next Tutorial ></a>
+        </div>
+    </div>
+    <footer>
+        <p>© <span id="year"></span> Tutorial Expert. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+<script type="text/javascript" src="../cookies/cookies.min.js"></script>
+<script type="text/javascript" src="../adsense.min.js"></script>
+<script>
+    initializeCookieConsent();
+
+    var actualYear = new Date().getFullYear();
+    document.getElementById('year').textContent = actualYear;
+</script>

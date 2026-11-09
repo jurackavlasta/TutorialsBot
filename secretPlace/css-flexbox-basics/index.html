@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-1253488304183553">
+    <meta name="description" content="Learn the fundamentals of CSS Flexbox, including its properties and how to use them to create flexible, responsive layouts.">
+    <title>CSS Flexbox Basics | Tutorial Expert</title>
+    
+    <link rel="stylesheet" href="../style.min.css">
+    <link rel="stylesheet" href="../cookies/cookies.min.css">
+    <link rel="icon" type="image/x-icon" href="../logo.ico">
+    
+</head>
+<body>
+    <header>
+        <h1>CSS Flexbox Basics</h1>
+    </header>
+    <div class="container">
+        <div class='tutorial'>
+  <p>CSS Flexbox is a layout model that provides an easier way to design complex and flexible layouts. It allows elements within a container to be arranged in rows or columns and provides control over their size, alignment, and distribution.</p>
+  
+  <h2>What is Flexbox?</h2>
+  <p>Flexbox, short for Flexible Box Layout, is a one-dimensional layout method for arranging items in rows or columns. It enables you to align and distribute space among items in a container, even when their sizes are unknown or dynamic.</p>
+  
+  <h2>Setting Up a Flexbox Layout</h2>
+  <p>To use Flexbox, first, define a container element as a flex container by applying the <code>display: flex</code> property to it. Items inside this container will become flex items.</p>
+  <pre><code>/* Flex container setup */
+.container {
+  display: flex;
+}</code></pre>
+  <p>Once a container is set to <code>display: flex</code>, all direct children inside it become flex items that can be easily manipulated using various flexbox properties.</p>
+  
+  <h2>Flexbox Properties</h2>
+  <p>Flexbox has several properties that control the layout of items inside the container. Here are the most commonly used properties:</p>
+  
+  <h3>1. justify-content</h3>
+  <p>The <code>justify-content</code> property aligns flex items along the main axis (horizontal by default). It helps control the spacing between items.</p>
+  <pre><code>.container {
+  display: flex;
+  justify-content: space-between;
+}</code></pre>
+  <p>The values for <code>justify-content</code> include:</p>
+  <ul>
+    <li><code>flex-start</code> (default) - Aligns items at the start of the container.</li>
+    <li><code>flex-end</code> - Aligns items at the end of the container.</li>
+    <li><code>center</code> - Aligns items in the center of the container.</li>
+    <li><code>space-between</code> - Distributes items evenly with the first item at the start and the last item at the end.</li>
+    <li><code>space-around</code> - Distributes items with equal space around them.</li>
+    <li><code>space-evenly</code> - Distributes items with equal space between and around them.</li>
+  </ul>
+  
+  <h3>2. align-items</h3>
+  <p>The <code>align-items</code> property aligns flex items along the cross axis (vertical by default).</p>
+  <pre><code>.container {
+  display: flex;
+  align-items: center;
+}</code></pre>
+  <p>The values for <code>align-items</code> include:</p>
+  <ul>
+    <li><code>stretch</code> (default) - Stretches items to fill the container.</li>
+    <li><code>flex-start</code> - Aligns items at the start of the cross axis.</li>
+    <li><code>flex-end</code> - Aligns items at the end of the cross axis.</li>
+    <li><code>center</code> - Aligns items in the center of the cross axis.</li>
+    <li><code>baseline</code> - Aligns items to their baseline.</li>
+  </ul>
+  
+  <h3>3. flex-direction</h3>
+  <p>The <code>flex-direction</code> property defines the direction in which flex items are placed in the container. It controls the main axis.</p>
+  <pre><code>.container {
+  display: flex;
+  flex-direction: column;
+}</code></pre>
+  <p>The values for <code>flex-direction</code> include:</p>
+  <ul>
+    <li><code>row</code> (default) - Items are placed in a horizontal row.</li>
+    <li><code>column</code> - Items are placed in a vertical column.</li>
+    <li><code>row-reverse</code> - Items are placed in a horizontal row in reverse order.</li>
+    <li><code>column-reverse</code> - Items are placed in a vertical column in reverse order.</li>
+  </ul>
+  
+  <h2>Example of Flexbox Layout</h2>
+  <p>Here's a simple example of a flex container with three flex items:</p>
+  <pre><code>.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: #4CAF50;
+}</code></pre>
+  <div class='container'>
+    <div class='item'></div>
+    <div class='item'></div>
+    <div class='item'></div>
+  </div>
+  <p>The items will be evenly spaced and aligned in the center of the container.</p>
+  
+  <h2>Conclusion</h2>
+  <p>CSS Flexbox is a powerful tool for creating responsive and flexible web layouts. By understanding and using the different properties, you can easily control the alignment and distribution of elements within a container, making it an essential tool for modern web design.</p>
+</div>
+        <div>#css #flexbox #web-design #responsive-design #frontend</div>
+        <div class="next-link">
+            <a href="/css-flexbox-basics">Next Tutorial ></a>
+        </div>
+    </div>
+    <footer>
+        <p>© <span id="year"></span> Tutorial Expert. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+<script type="text/javascript" src="../cookies/cookies.min.js"></script>
+<script type="text/javascript" src="../adsense.min.js"></script>
+<script>
+    initializeCookieConsent();
+    var actualYear = new Date().getFullYear();
+    document.getElementById('year').textContent = actualYear;
+</script>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Python decorators, their syntax, usage, and how they enhance the functionality of functions and methods.">
+    <meta name="google-adsense-account" content="ca-pub-1253488304183553">
+    <title>Overview of Python Decorators | Tutorial Expert</title>
+    <link rel="stylesheet" href="../style.min.css">
+    <link rel="stylesheet" href="../cookies/cookies.min.css">
+    <link rel="icon" type="image/x-icon" href="../logo.ico">
+</head>
+<body>
+    <header>
+        <h1>Overview of Python Decorators</h1>
+    </header>
+    <div class="container">
+        <div class="tutorial">
+    <h2>Introduction</h2>
+    <p>Python decorators provide an elegant and powerful way to modify or extend the behavior of functions or methods without changing their actual code. A decorator is essentially a callable (like a function) that takes another function as an argument and extends its behavior.</p>
+    
+    <h2>Understanding Decorators</h2>
+    <h3>What is a Decorator?</h3>
+    <p>A decorator in Python is a function that takes another function and extends its behavior without explicitly modifying it. This allows for cleaner, more maintainable code by separating concerns.</p>
+    
+    <h3>Syntax of Decorators</h3>
+    <p>The syntax for using decorators is straightforward. A decorator is defined with the <code>@decorator_name</code> syntax above the function definition. Here’s a basic example:</p>
+    <pre><code>def decorator_function(original_function):
+        def wrapper_function():
+            print("Wrapper executed before " + original_function.__name__)
+            return original_function()
+        return wrapper_function
+    
+    @decorator_function
+    def display():
+        print("Display function executed")
+    
+    display()</code></pre>
+    <p>In this example, before the <code>display</code> function executes, the <code>wrapper_function</code> runs, demonstrating how decorators can enhance functionality.</p>
+    
+    <h2>Practical Uses of Decorators</h2>
+    <h3>Logging</h3>
+    <p>One common use of decorators is logging. By creating a logging decorator, you can track when certain functions are called, which can be useful for debugging:</p>
+    <pre><code>def logger(original_function):
+        def wrapper_function(*args, **kwargs):
+            print(f'Logging: {original_function.__name__} was called')
+            return original_function(*args, **kwargs)
+        return wrapper_function
+    
+    @logger
+    def add(x, y):
+        return x + y
+    
+    add(5, 10)</code></pre>
+    <p>This will log whenever the <code>add</code> function is called.</p>
+    
+    <h3>Authentication</h3>
+    <p>Decorators can also handle authentication for functions in Flask or other web frameworks:</p>
+    <pre><code>def require_authentication(f):
+        def decorated_function(*args, **kwargs):
+            if not user_is_authenticated():
+                raise Exception("User not authenticated")
+            return f(*args, **kwargs)
+        return decorated_function
+    
+    @require_authentication
+    def view_sensitive_data():
+        return 'Sensitive data here'</code></pre>
+    <p>Here, the <code>require_authentication</code> decorator checks if the user is authenticated before allowing access to the <code>view_sensitive_data</code> function.</p>
+    
+    <h2>Chaining Decorators</h2>
+    <p>Multiple decorators can be applied to a single function. They will be applied from the innermost to the outermost:</p>
+    <pre><code>@decorator_one
+@decorator_two
+def func():
+    pass</code></pre>
+    <p>This results in <code>decorator_two</code> being executed first, followed by <code>decorator_one</code>.</p>
+    
+    <h2>Conclusion</h2>
+    <p>Python decorators are a powerful feature that allows for clean and maintainable code. They are widely used across various applications, enhancing the functionality of the functions they wrap. Understanding how to create and utilize decorators opens up numerous possibilities for programmers looking to write efficient Python code.</p>
+</div>
+        <div>#python #decorators #programming #advanced-python #software-development</div>
+        <div class="next-link">
+            <a href="/understanding-functional-programming">Next Tutorial ></a>
+        </div>
+    </div>
+    <footer>
+        <p>© <span id="year"></span> Tutorial Expert. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+<script type="text/javascript" src="../cookies/cookies.min.js"></script>
+<script type="text/javascript" src="../adsense.min.js"></script>
+<script>
+    initializeCookieConsent();
+
+    var actualYear = new Date().getFullYear();
+    document.getElementById('year').textContent = actualYear;
+</script>

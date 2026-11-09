@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive guide to Django web framework covering setup, architecture, features, and tips for effective web development.">
+    <meta name="google-adsense-account" content="ca-pub-1253488304183553">
+    <title>Django Web Framework Guide | Tutorial Expert</title>
+    <link rel="stylesheet" href="../style.min.css">
+    <link rel="stylesheet" href="../cookies/cookies.min.css">
+    <link rel="icon" type="image/x-icon" href="../logo.ico">
+</head>
+<body>
+    <header>
+        <h1>Django Web Framework Guide</h1>
+    </header>
+    <div class="container">
+        <div class="tutorial">
+    <h2>Introduction to Django</h2>
+    <p>Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It has a built-in admin interface, an ORM (Object-Relational Mapping) system, and follows the model-template-views (MTV) architectural pattern.</p>
+
+    <h2>Setting Up Django</h2>
+    <h3>Prerequisites</h3>
+    <p>Ensure you have Python installed on your system. You can download the latest version from the <a href="https://www.python.org/downloads/">official Python website</a>.</p>
+    <h3>Installation Steps</h3>
+    <ul>
+        <li>Open your terminal or command prompt.</li>
+        <li>Install Django using pip:
+            <code>pip install django</code>
+        </li>
+        <li>Verify the installation:
+            <code>django-admin --version</code>
+        </li>
+    </ul>
+
+    <h2>Creating a New Django Project</h2>
+    <p>Once Django is installed, you can create a new project using the following command:</p>
+    <code>django-admin startproject myproject</code>
+    <p>This command creates a new directory named <code>myproject</code>, containing the necessary files and directories for a Django project.</p>
+
+    <h2>Django Project Structure</h2>
+    <p>Understanding the Django project structure is crucial for efficient development. Here’s a breakdown of the directory created:</p>
+    <ul>
+        <li><code>manage.py</code>: A command-line utility for managing your Django project.</li>
+        <li>The project package (same name as the project): Contains settings, URLs, and WSGI files.</li>
+    </ul>
+
+    <h2>Creating a Django App</h2>
+    <p>In Django, a project can have multiple applications. To create a new app, use:</p>
+    <code>python manage.py startapp myapp</code>
+    <h3>Registering the App</h3>
+    <p>After creating the app, add it to the <code>INSTALLED_APPS</code> list in your project's settings:</p>
+    <code>INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'myapp',
+]</code>
+
+    <h2>Defining Models</h2>
+    <p>Models in Django represent your database schema. Here is an example of how to define a model:</p>
+    <pre><code>from django.db import models
+
+class Post(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)</code></pre>
+
+    <h2>Admin Interface</h2>
+    <p>Django automatically creates an admin interface for managing the models. Register your models in <code>admin.py</code> to access them:</p>
+    <pre><code>from django.contrib import admin
+from .models import Post
+
+admin.site.register(Post)</code></pre>
+
+    <h2>Running the Development Server</h2>
+    <p>You can start a local server to see your application in action:</p>
+    <code>python manage.py runserver</code>
+    <p>Navigate to <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> in your web browser to view your site.</p>
+
+    <h2>Conclusion</h2>
+    <p>Django is a powerful web framework that simplifies web development. By following the guide, you can create robust web applications quickly and efficiently.</p>
+</div>
+        <div>#django #web-development #python #programming #framework</div>
+        <div class="next-link">
+            <a href="/understanding-watercolor-techniques">Next Tutorial ></a>
+        </div>
+    </div>
+    <footer>
+        <p>© <span id="year"></span> Tutorial Expert. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+<script type="text/javascript" src="../cookies/cookies.min.js"></script>
+<script type="text/javascript" src="../adsense.min.js"></script>
+<script>
+    initializeCookieConsent();
+
+    var actualYear = new Date().getFullYear();
+    document.getElementById('year').textContent = actualYear;
+</script>

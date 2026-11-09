@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-1253488304183553">
+    <meta name="description" content="A beginner's guide to understanding the basics of JavaScript, including variables, functions, and control flow.">
+    <title>JavaScript Basics | Tutorial Expert</title>
+    
+    <link rel="stylesheet" href="../style.min.css">
+    <link rel="stylesheet" href="../cookies/cookies.min.css">
+    <link rel="icon" type="image/x-icon" href="../logo.ico">
+    
+</head>
+<body>
+    <header>
+        <h1>JavaScript Basics</h1>
+    </header>
+    <div class="container">
+        
+    <div class="container">
+        <h2>Introduction to JavaScript</h2>
+        <p>JavaScript is a versatile programming language that is widely used in web development. It allows you to add interactive elements to web pages, making them dynamic and user-friendly.</p>
+        
+        <h3>What is JavaScript?</h3>
+        <p>JavaScript is a high-level, interpreted programming language that is primarily used to create interactive effects within web browsers. It can manipulate HTML and CSS, making websites more interactive.</p>
+        
+        <h3>Setting Up Your Environment</h3>
+        <p>Before you start coding with JavaScript, you need a code editor. Some popular options include:</p>
+        <ul>
+            <li>Visual Studio Code</li>
+            <li>Atom</li>
+            <li>Sublime Text</li>
+        </ul>
+        <p>Ensure that you have a modern web browser like Google Chrome or Mozilla Firefox for testing your JavaScript code.</p>
+
+        <h3>Understanding Variables</h3>
+        <p>In JavaScript, variables are used to store data values. There are three ways to declare variables in JavaScript:</p>
+        <ul>
+            <li><strong>var</strong> - Used before ES6, now mostly replaced by <strong>let</strong> and <strong>const</strong>.</li>
+            <li><strong>let</strong> - Block-scoped variable, introduced in ES6.</li>
+            <li><strong>const</strong> - Used for constants, ensuring the value cannot be reassigned.</li>
+        </ul>
+        <p>Example:</p>
+        <pre>
+            let name = "John";
+            const age = 25;
+        </pre>
+
+        <h3>Functions in JavaScript</h3>
+        <p>Functions allow you to encapsulate code that can be reused. Functions in JavaScript are defined using the <strong>function</strong> keyword:</p>
+        <pre>
+            function greet() {
+                console.log("Hello, World!");
+            }
+            greet();
+        </pre>
+        <p>You can also create functions that take parameters and return values:</p>
+        <pre>
+            function add(a, b) {
+                return a + b;
+            }
+            console.log(add(5, 3)); // 8
+        </pre>
+
+        <h3>Control Flow</h3>
+        <p>Control flow allows you to control the execution order of code using conditional statements and loops. Common control flow statements include:</p>
+        
+        <h4>Conditionals</h4>
+        <p>Conditionals check whether a condition is true or false and execute code based on that. Common conditional statements are <strong>if</strong>, <strong>else</strong>, and <strong>switch</strong>:</p>
+        <pre>
+            if (age > 18) {
+                console.log("Adult");
+            } else {
+                console.log("Minor");
+            }
+        </pre>
+        
+        <h4>Loops</h4>
+        <p>Loops allow you to repeat a block of code multiple times. The most common types of loops are:</p>
+        <ul>
+            <li><strong>for</strong> loop</li>
+            <li><strong>while</strong> loop</li>
+        </ul>
+        <p>Example of a for loop:</p>
+        <pre>
+            for (let i = 0; i < 5; i++) {
+                console.log(i);
+            }
+        </pre>
+
+        <h3>DOM Manipulation</h3>
+        <p>JavaScript is often used to manipulate the Document Object Model (DOM), which represents the HTML structure of a web page. Here’s how you can select and modify elements:</p>
+        <pre>
+            document.getElementById("myElement").innerHTML = "New Content";
+        </pre>
+
+        <h3>Conclusion</h3>
+        <p>JavaScript is an essential skill for web developers. With a good understanding of variables, functions, control flow, and DOM manipulation, you can start building interactive and dynamic websites.</p>
+    </div>
+    
+        <div>#javascript #beginner #web-development #programming #coding</div>
+        <div class="next-link">
+            <a href="/javascript-basics-for-beginners">Next Tutorial ></a>
+        </div>
+    </div>
+    <footer>
+        <p>© <span id="year"></span> Tutorial Expert. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+<script type="text/javascript" src="../cookies/cookies.min.js"></script>
+<script type="text/javascript" src="../adsense.min.js"></script>
+<script>
+    initializeCookieConsent();
+    var actualYear = new Date().getFullYear();
+    document.getElementById('year').textContent = actualYear;
+</script>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn the fundamentals of JavaScript event handling in this detailed tutorial. Understand event types, listeners, and more!">
+    <meta name="google-adsense-account" content="ca-pub-1253488304183553">
+    <title>JavaScript Event Handling Basics | Tutorial Expert</title>
+    <link rel="stylesheet" href="../style.min.css">
+    <link rel="stylesheet" href="../cookies/cookies.min.css">
+    <link rel="icon" type="image/x-icon" href="../logo.ico">
+</head>
+<body>
+    <header>
+        <h1>JavaScript Event Handling Basics</h1>
+    </header>
+    <div class="container">
+        <div class="tutorial">
+    <h2>Introduction to JavaScript Event Handling</h2>
+    <p>JavaScript provides developers with a powerful way to create interactive web applications through <strong>event handling</strong>. By responding to user actions like clicks, key presses, and mouse movements, developers can enhance the user experience significantly. This tutorial delves into the core concepts of JavaScript event handling.</p>
+
+    <h2>Understanding Events</h2>
+    <p>An <strong>event</strong> in JavaScript is any significant action that occurs in the browser, such as a user clicking a button or moving the mouse. Different types of events exist, including:</p>
+    <ul>
+        <li><strong>Mouse Events</strong>: Events triggered by mouse actions, such as <code>click</code>, <code>dblclick</code>, and <code>mousemove</code>.</li>
+        <li><strong>Keyboard Events</strong>: Events tied to keyboard actions like <code>keydown</code>, <code>keyup</code>, and <code>keypress</code>.</li>
+        <li><strong>Focus Events</strong>: Triggered when elements gain or lose focus, specifically <code>focus</code> and <code>blur</code>.</li>
+        <li><strong>Form Events</strong>: Events related to form interactions, such as <code>submit</code> and <code>change</code>.</li>
+    </ul>
+
+    <h3>Event Types</h3>
+    <p>Events can be categorized further, such as:</p>
+    <ul>
+        <li><strong>Synchronous Events</strong>: Events that happen in the same sequence as the code execution.</li>
+        <li><strong>Asynchronous Events</strong>: Events triggered independently of the main program flow.</li>
+    </ul>
+
+    <h2>Adding Event Listeners</h2>
+    <p>To react to events, developers use <strong>event listeners</strong>. Event listeners are functions that execute when an event occurs on a specified element.</p>
+    <pre><code>const button = document.getElementById('myButton');
+button.addEventListener('click', function() {
+    alert('Button clicked!');
+});
+</code></pre>
+
+    <h3>Removing Event Listeners</h3>
+    <p>It's also possible to remove event listeners when they are no longer needed:</p>
+    <pre><code>const handleClick = function() {
+    alert('Button clicked!');
+};
+button.addEventListener('click', handleClick);
+button.removeEventListener('click', handleClick);
+</code></pre>
+
+    <h2>Event Object</h2>
+    <p>When an event is triggered, an <strong>event object</strong> is created and passed to the event handler. This object contains useful properties and methods that provide information about the event. Some key properties include:</p>
+    <ul>
+        <li><strong>event.type</strong>: Returns the type of the event (e.g., 'click').</li>
+        <li><strong>event.target</strong>: Identifies the element that triggered the event.</li>
+        <li><strong>event.currentTarget</strong>: Refers to the element to which the event handler is attached.</li>
+    </ul>
+
+    <h2>Event Delegation</h2>
+    <p><strong>Event delegation</strong> refers to the practice of attaching a single event listener to a parent element rather than individual child elements. This method can enhance performance and reduce memory usage.</p>
+    <pre><code>const list = document.getElementById('myList');
+list.addEventListener('click', function(event) {
+    if (event.target.tagName === 'LI') {
+        alert(`List item clicked: ${event.target.textContent}`);
+    }
+});
+</code></pre>
+
+    <h2>Conclusion</h2>
+    <p>In this tutorial, we explored the basics of JavaScript event handling, including events, event listeners, and delegation techniques. Mastering these concepts will allow you to create highly interactive and responsive web applications.</p>
+</div>
+        <div>#javascript #event-handling #web-development #programming-basics</div>
+        <div class="next-link">
+            <a href="/python-web-development-frameworks">Next Tutorial ></a>
+        </div>
+    </div>
+    <footer>
+        <p>© <span id="year"></span> Tutorial Expert. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+<script type="text/javascript" src="../cookies/cookies.min.js"></script>
+<script type="text/javascript" src="../adsense.min.js"></script>
+<script>
+    initializeCookieConsent();
+
+    var actualYear = new Date().getFullYear();
+    document.getElementById('year').textContent = actualYear;
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutorials and guides for everything you need to know, all in one place.">
+    <meta name="google-adsense-account" content="ca-pub-1253488304183553">
+    <link rel="stylesheet" href="../style.min.css">
+    <link rel="stylesheet" href="../index-style.min.css">
+    <link rel="stylesheet" href="../cookies/cookies.min.css">
+    <link rel="icon" type="image/x-icon" href="../logo.ico">
+    <title>Tutorials | Tutorial Expert</title>
+</head>
+
+<body>
+    <div class="hero">
+        <h1>Tutorials</h1>
+        <p>Tutorials and guides for everything you need to know, all in one place.</p>
+        <div class="tutorial-list" id="tutorial-list"></div>
+        <div class="load-more-container">
+            <button class="load-more-btn" id="load-more-btn">Load More Tutorials</button>
+        </div>
+    </div>
+    <footer>
+        <p>
+            <a href="/privacy-policy">Privacy Policy</a> |
+            <a href="/terms-of-use">Terms of Use</a> |
+            <a href="mailto:info@tutorial-export.com">Contact Us</a>
+        </p>
+        <p>© <span id="year"></span> Tutorial Expert. All Rights Reserved.</p>
+    </footer>
+
+    <script type="text/javascript" src="../tutorials.min.js"></script>
+    <script type="text/javascript" src="../adsense.min.js"></script>
+    <script type="text/javascript" src="../cookies/cookies.min.js"></script>
+    <script>
+        initializeCookieConsent();
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById('load-more-btn').onclick = function () {
+            displayTutorials();
+        };
+    </script>
+</body>
+
+</html>

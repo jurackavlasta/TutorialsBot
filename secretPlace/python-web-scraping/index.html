@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-1253488304183553">
+    <meta name="description" content="Learn the basics of web scraping using Python.">
+    <title>Python Web Scraping | Tutorial Expert</title>
+    
+    <link rel="stylesheet" href="../style.min.css">
+    <link rel="stylesheet" href="../cookies/cookies.min.css">
+    <link rel="icon" type="image/x-icon" href="../logo.ico">
+    
+</head>
+<body>
+    <header>
+        <h1>Python Web Scraping</h1>
+    </header>
+    <div class="container">
+        <div class="tutorial">
+  <h2>Introduction</h2>
+  <p>Web scraping is a technique used to extract data from websites. In this tutorial, we will learn how to perform web scraping using Python.</p>
+  <h2>Requirements</h2>
+  <ul>
+    <li>Python installed on your system</li>
+    <li>Basic knowledge of Python programming</li>
+    <li>Internet connection</li>
+  </ul>
+  <h2>Installing Required Libraries</h2>
+  <p>We will use the <code>requests</code> and <code>BeautifulSoup</code> libraries for web scraping. Install them using pip:</p>
+  <pre><code>pip install requests beautifulsoup4</code></pre>
+  <h2>Fetching a Web Page</h2>
+  <p>First, we need to fetch the content of a web page. We can do this using the <code>requests</code> library:</p>
+  <pre><code>import requests
+
+url = 'https://example.com'
+response = requests.get(url)
+print(response.text)</code></pre>
+  <h2>Parsing HTML Content</h2>
+  <p>Next, we will parse the HTML content using <code>BeautifulSoup</code>:</p>
+  <pre><code>from bs4 import BeautifulSoup
+
+soup = BeautifulSoup(response.text, 'html.parser')
+print(soup.prettify())</code></pre>
+  <h2>Extracting Data</h2>
+  <p>We can now extract specific data from the HTML. For example, to extract all the links:</p>
+  <pre><code>links = soup.find_all('a')
+for link in links:
+    print(link.get('href'))</code></pre>
+  <h2>Conclusion</h2>
+  <p>In this tutorial, we learned the basics of web scraping using Python. We covered fetching a web page, parsing HTML content, and extracting data.</p>
+</div>
+        <div>#python #web-scraping #data-extraction #beautifulsoup #requests</div>
+        <div class="next-link">
+            <a href="/training-your-dog">Next Tutorial ></a>
+        </div>
+    </div>
+    <footer>
+        <p>© <span id="year"></span> Tutorial Expert. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+<script type="text/javascript" src="../cookies/cookies.min.js"></script>
+<script type="text/javascript" src="../adsense.min.js"></script>
+<script>
+    initializeCookieConsent();
+    var actualYear = new Date().getFullYear();
+    document.getElementById('year').textContent = actualYear;
+</script>

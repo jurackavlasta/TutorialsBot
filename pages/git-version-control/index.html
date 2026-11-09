@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-1253488304183553">
+    <meta name="description" content="Learn the basics of Git, the popular version control system. Understand how to initialize a repository, commit changes, and collaborate with others.">
+    <title>Git Version Control | Tutorial Expert</title>
+    
+    <link rel="stylesheet" href="../style.min.css">
+    <link rel="stylesheet" href="../cookies/cookies.min.css">
+    <link rel="icon" type="image/x-icon" href="../logo.ico">
+    
+</head>
+<body>
+    <header>
+        <h1>Git Version Control</h1>
+    </header>
+    <div class="container">
+        <div class='tutorial'>
+  <p>Git is a powerful version control system that helps developers track and manage changes to their codebase over time. It is widely used for collaborative software development, allowing teams to efficiently work together and maintain a history of changes.</p>
+  
+  <h2>What is Version Control?</h2>
+  <p>Version control is a system that allows developers to track and manage changes to files and code over time. Git is a distributed version control system, which means each developer has a full copy of the code repository on their local machine, allowing for offline work and branching.</p>
+  
+  <h2>Setting Up Git</h2>
+  <p>Before using Git, you need to install it on your system. You can download it from the official website: <a href='https://git-scm.com/downloads' target='_blank'>Git Downloads</a>.</p>
+  
+  <h3>Installing Git</h3>
+  <p>After downloading the Git installer for your operating system, follow the instructions to install it. Once Git is installed, you can verify the installation by running the following command in your terminal or command prompt:</p>
+  <pre><code>git --version</code></pre>
+  <p>This should return the installed version of Git, confirming that it was installed correctly.</p>
+  
+  <h2>Creating a Git Repository</h2>
+  <p>Once Git is installed, you can initialize a repository in any project directory. A repository is simply a directory where Git tracks changes to files.</p>
+  <h3>Initialize a New Repository</h3>
+  <pre><code>git init</code></pre>
+  <p>This command will create a hidden <code>.git</code> folder in your project, which Git will use to track your changes.</p>
+  
+  <h3>Clone an Existing Repository</h3>
+  <p>If you want to start working on an existing project, you can clone the repository from a remote server (e.g., GitHub or GitLab) using the <code>git clone</code> command:</p>
+  <pre><code>git clone https://github.com/username/repository.git</code></pre>
+  <p>This will create a local copy of the repository on your machine, allowing you to start working on the project immediately.</p>
+  
+  <h2>Basic Git Commands</h2>
+  <p>Once you have initialized or cloned a Git repository, you can start using Git to track changes. Here are some of the most common Git commands:</p>
+  
+  <h3>1. git status</h3>
+  <p>The <code>git status</code> command shows you the current state of your working directory. It displays which files have been modified, added, or deleted.</p>
+  <pre><code>git status</code></pre>
+  
+  <h3>2. git add</h3>
+  <p>Use the <code>git add</code> command to stage changes that you want to include in your next commit. You can add individual files or all changes at once:</p>
+  <pre><code>git add <file-name></code></pre>
+  <p>To add all changes:</p>
+  <pre><code>git add .</code></pre>
+  
+  <h3>3. git commit</h3>
+  <p>The <code>git commit</code> command is used to save your staged changes to the local repository. You should always provide a descriptive message when committing changes:</p>
+  <pre><code>git commit -m 'Your commit message'</code></pre>
+  
+  <h3>4. git push</h3>
+  <p>To share your local changes with others, use the <code>git push</code> command. This will upload your changes to a remote repository:</p>
+  <pre><code>git push origin main</code></pre>
+  <p>Replace <code>main</code> with the name of the branch you are pushing to, if necessary.</p>
+  
+  <h3>5. git pull</h3>
+  <p>To update your local repository with the latest changes from the remote, use the <code>git pull</code> command:</p>
+  <pre><code>git pull origin main</code></pre>
+  <p>This will fetch and merge changes from the remote repository into your local branch.</p>
+  
+  <h2>Branching and Merging</h2>
+  <p>One of the most powerful features of Git is branching. Branching allows you to work on different features or bug fixes without affecting the main codebase.</p>
+  
+  <h3>Creating a New Branch</h3>
+  <p>To create a new branch, use the <code>git branch</code> command:</p>
+  <pre><code>git branch new-feature</code></pre>
+  <p>After creating a branch, you can switch to it using the <code>git checkout</code> command:</p>
+  <pre><code>git checkout new-feature</code></pre>
+  
+  <h3>Merging Branches</h3>
+  <p>Once you've finished working on a feature or bug fix, you can merge your branch back into the main branch (e.g., <code>main</code> or <code>master</code>) using the <code>git merge</code> command:</p>
+  <pre><code>git checkout main
+  git merge new-feature</code></pre>
+  
+  <h2>Collaboration with Git</h2>
+  <p>Git is an excellent tool for collaboration. By using remote repositories and regularly pushing and pulling changes, teams can work together effectively. Popular Git hosting services include GitHub, GitLab, and Bitbucket.</p>
+  
+  <h2>Conclusion</h2>
+  <p>Git is an essential tool for modern software development. By understanding the basics of Git commands and version control, you can manage your codebase more effectively and collaborate with others with ease. Remember to frequently commit your changes and push them to remote repositories to keep your work synchronized with the team.</p>
+</div>
+        <div>#git #version-control #programming #software-development #collaboration</div>
+        <div class="next-link">
+            <a href="/css-flexbox-basics">Next Tutorial ></a>
+        </div>
+    </div>
+    <footer>
+        <p>© <span id="year"></span> Tutorial Expert. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+<script type="text/javascript" src="../cookies/cookies.min.js"></script>
+<script type="text/javascript" src="../adsense.min.js"></script>
+<script>
+    initializeCookieConsent();
+    var actualYear = new Date().getFullYear();
+    document.getElementById('year').textContent = actualYear;
+</script>
